@@ -15,10 +15,10 @@ if the user not write any ZIP code, alert box will show in the browser to tell h
 
 ## Dependencies
 
-node.js
-express
-body-parser
-cors
+- node.js
+- express
+- body-parser
+- cors
 
 ## Change in the Code
 
