@@ -1,88 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
 body{
     background: #fffff8;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 #app{
-    display: grid;
-    grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
-    height:100vh;
-    background: #f23557;
-    color: #f0d43a;
-    justify-content: center;
-    grid-gap: 1em;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+    width: 100%;
+    background: url("bg.jpeg") no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+#app::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
 }
 
-.holder{
-
+.holder:nth-child(2) {
+    margin-top: 2rem;
 }
-
 .entry{
-    background: rgba(59, 74, 107, .4);
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    width: 600px;
+    margin: 3rem auto;
+    padding: 1rem 2rem;
+    border-radius: 10px;
 }
 
 #entryHolder{
-
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+#entryHolder .top {
+    flex-basis: calc(50% - 2rem);
+    text-align: center;
+    margin-top: 1.5rem;
+}
+#entryHolder .bottom {
+    flex-basis: 100%;
 }
 
 #date{
-
+    margin-top: 1rem;
+    font-size: 15px;
 }
 
 #temp{
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+#city {
+    font-size: 26px;
+}
+
+#desc {
+    margin-top: 1rem;
+    font-size: 15px;
 }
 
 #content{
-
+    text-align: center;
 }
 
 .headline {
-
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
 }
 .title{
-
+    text-align: center;
+    background: rgba(0, 0, 0, 0.1);
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    padding: 0.250rem 0;
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
 label{
     display:block;
     font-size: 27px;
+    text-align: center;
 }
 
 input{
     display:block;
-    height: 60px;
+    margin: 0.5rem auto;
+    height: 40px;
     width: 320px;
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+    background: #004153;
+    color: #fff;
+    font-size: 18px;
     border: none;
+    text-align: center;
+    outline: none;
+    border-radius: 5px;
 }
 
-button{
-    width: 400px;
-    height: 100px;
+button {
+    display: block;
+    margin: 0.5rem auto;
+    width: 320px;
+    height: 40px;
     background: #3b4a6b;
-    color: #f0d43a;
-    font-size: 26px;
-    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    font-size: 18px;
     border: none;
     box-shadow: 2px 4px 5px #444;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+button:hover {
+    background: #004153;
 }
 h1{
     font-size: 36px;
 }
 
 textarea{
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+    display: block;
+    background: #004153;
+    color: #fff;
+    resize: none;
+    font-size: 18px;
+    width: 320px;
+    height: 80px;
+    padding: 0.5rem;
+    margin: 0.5rem auto;
+    outline: none;
+    border: none;
+    border-radius: 5px;
 }
 /* Reset style for HTML element on active to have no border*/
 input:focus,
@@ -93,19 +157,16 @@ button:focus {
 }
 /* Style for Placeholder Text*/
 ::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
-
+    color: #bbb; 
+    font-size: 16px;
 } 
   
 :-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
-
+    color: #bbb; 
+    font-size: 16px;
 } 
   
 ::-ms-input-placeholder { /* Microsoft Edge */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
-
+    color: #bbb; 
+    font-size: 16px;
 } 
